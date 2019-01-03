@@ -4,10 +4,19 @@
 
 ## Installation
 
+Yarn:
 ```bash
 $ choco yarn install
 $ brew install yarn
------
+```
+
+Typescript transpiler:
+```bash
+npm install -g typescript
+```
+
+Install dependencies:
+```
 $ yarn install
 ```
 
