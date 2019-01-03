@@ -1,20 +1,29 @@
 import {Injectable} from '@nestjs/common';
 import {QuestionDal} from '../dal/question.dal';
 import {Question} from '../models/Question';
+import {ICrud} from '../interfaces/icrud';
 
 @Injectable()
-export class QuestionLogic {
+export class QuestionLogic implements ICrud<Question> {
   constructor(private questionDal: QuestionDal) { }
 
-  async saveQuestion(question: Question): Promise<Question> {
-    return await this.questionDal.saveQuestion(question);
+  async get(id: string): Promise<Question> {
+    return await this.questionDal.get(id);
   }
 
-  async getAllQuestions(): Promise<Question[]> {
-    return await this.questionDal.getAllQuestions();
+  async getAll(): Promise<Question[]> {
+    return await this.questionDal.getAll();
+  }
+  
+  async delete(id: string): Promise<boolean> {
+    return await this.questionDal.delete(id);
   }
 
-  async getAllQuestions(): Promise<Question[]> {
-    return await this.questionDal.getAllQuestions();
+  async save(question: Question): Promise<Question> {
+    return await this.questionDal.save(question);
+  }
+
+  async update(id: string, question: Question): Promise<boolean> {
+    return this.questionDal.update(id, question);
   }
 }
