@@ -17,7 +17,7 @@ npm install -g typescript
 
 Install dependencies:
 ```
-$ yarn install
+yarn install
 ```
 
 ## Running the app
