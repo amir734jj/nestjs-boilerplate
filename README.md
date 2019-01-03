@@ -6,8 +6,8 @@
 
 Yarn:
 ```bash
-$ choco yarn install
-$ brew install yarn
+choco yarn install
+brew install yarn
 ```
 
 Typescript transpiler:
