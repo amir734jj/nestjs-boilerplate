@@ -30,7 +30,7 @@ __decorate([
     __metadata("design:type", String)
 ], Question.prototype, "category", void 0);
 __decorate([
-    typeorm_1.OneToMany(_ => Tag_1.Tag, tag => tag.id),
+    typeorm_1.OneToMany(type => Tag_1.Tag, tag => tag.question),
     __metadata("design:type", Array)
 ], Question.prototype, "tags", void 0);
 Question = __decorate([

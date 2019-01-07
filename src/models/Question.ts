@@ -15,6 +15,6 @@ export class Question {
   @Column()
   category: string;
 
-  @OneToMany(_ => Tag, tag => tag.id)
+  @OneToMany(type => Tag, tag => tag.question)
   tags: Tag[];
 }

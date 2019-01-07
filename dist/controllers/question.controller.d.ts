@@ -7,6 +7,6 @@ export declare class QuestionController implements ICrud<Question> {
     get(id: string): Promise<Question>;
     getAll(): Promise<Question[]>;
     delete(id: string): Promise<boolean>;
-    save(instance: Question): Promise<Question>;
-    update(id: string, instance: Question): Promise<boolean>;
+    save(question: Question): Promise<Question>;
+    update(id: string, question: Question): Promise<boolean>;
 }
